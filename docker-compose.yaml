@@ -1,0 +1,33 @@
+services:
+  mongo:
+    container_name: "mongo-db-comparison"
+    image: mongo
+    ports:
+      - "27017:27017"
+    networks:
+      - "databases"
+    environment:
+      MONGO_INTIDB_ROOT_USERNAME: "root"
+      MONGO_INTIDB_ROOT_PASSWORD: "root"
+    restart: on-failure
+
+  cassandra:
+    container_name: "cassandra-db-comparison"
+    image: cassandra
+    networks:
+      - "databases"
+    restart: on-failure
+
+  postgres:
+    container_name: "postgres-db-comparison"
+    image: postgres
+    networks:
+      - "databases"
+    restart: on-failure
+    environment:
+      POSTGRES_PASSWORD: "postgres"
+      POSTGRES_USER: "postgres"
+    ports:
+      - "5432:5432"
+networks:
+  databases: {}
