@@ -1,6 +1,5 @@
 package br.edu.ufersa.dbcomparsion.postgres;
 
-import br.edu.ufersa.dbcomparsion.cassandra.UserCassandra;
 import br.edu.ufersa.dbcomparsion.utils.User;
 import jakarta.persistence.*;
 

@@ -1,6 +1,5 @@
 package br.edu.ufersa.dbcomparsion.mongo;
 
-import br.edu.ufersa.dbcomparsion.cassandra.UserCassandra;
 import br.edu.ufersa.dbcomparsion.utils.User;
 import org.springframework.data.mongodb.core.mapping.Document;
 
