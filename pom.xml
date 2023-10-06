@@ -11,8 +11,8 @@
 	<groupId>br.edu.ufersa</groupId>
 	<artifactId>db-comparison</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>db-comparsion</name>
-	<description>comparsion of three types os databases. (PostgreSQL, MongoDB and Cassandra</description>
+	<name>db-comparison</name>
+	<description>comparison of three types os databases. (PostgreSQL, MongoDB and Cassandra)</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>

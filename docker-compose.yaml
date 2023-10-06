@@ -14,13 +14,15 @@ services:
   cassandra:
     container_name: "cassandra-db-comparison"
     image: cassandra
+    ports:
+      - "9042:9042"
     networks:
       - "databases"
     restart: on-failure
 
   postgres:
     container_name: "postgres-db-comparison"
-    image: postgres
+    build: ./postgresConfig
     networks:
       - "databases"
     restart: on-failure
