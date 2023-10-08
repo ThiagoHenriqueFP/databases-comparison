@@ -17,8 +17,16 @@ public class UserMongoController {
     public ResponseEntity<?> save (
             @RequestBody UserMongo user
     ) {
+
+        UserMongo u = new UserMongo(
+                user.getName(),
+                user.getUsername(),
+                user.getEmail(),
+                user.getWebsite()
+        );
+
         return ResponseEntity.ok(
-                userMongoService.save(user)
+                userMongoService.save(u)
         );
     }
 
