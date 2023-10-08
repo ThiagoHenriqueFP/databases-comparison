@@ -28,6 +28,13 @@ public class UserCassandraController {
         );
     }
 
+    @GetMapping
+    public ResponseEntity<?> getAll() {
+        return ResponseEntity.ok(
+                userCassandraService.getAll()
+        );
+    }
+
     @PutMapping("/{id}")
     public ResponseEntity<?> update(
             @PathVariable String id,

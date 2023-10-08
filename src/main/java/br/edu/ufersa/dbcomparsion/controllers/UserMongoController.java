@@ -29,6 +29,13 @@ public class UserMongoController {
         );
     }
 
+    @GetMapping
+    public ResponseEntity<?> getAll(){
+        return ResponseEntity.ok(
+                userMongoService.getAll()
+        );
+    }
+
     @PutMapping("/{id}")
     public ResponseEntity<?> update(
             @PathVariable String id,

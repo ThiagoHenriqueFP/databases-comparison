@@ -38,4 +38,8 @@ public class UserCassandraService {
     public void deleteById(String id) {
         userCassandraRepository.deleteById(id);
     }
+
+    public Iterable<UserCassandra> getAll() {
+        return userCassandraRepository.findAll();
+    }
 }

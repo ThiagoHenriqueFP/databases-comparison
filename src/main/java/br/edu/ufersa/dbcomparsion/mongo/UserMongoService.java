@@ -4,6 +4,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.List;
+
 @Service
 public class UserMongoService {
     private final UserMongoRepository userMongoRepository;
@@ -36,6 +38,10 @@ public class UserMongoService {
     }
     public void deleteById(String id) {
         userMongoRepository.deleteById(id);
+    }
+
+    public List<UserMongo> getAll() {
+        return userMongoRepository.findAll();
     }
 
 }
