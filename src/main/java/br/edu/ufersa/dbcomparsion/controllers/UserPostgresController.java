@@ -22,6 +22,13 @@ public class UserPostgresController {
         );
     }
 
+    @GetMapping
+    public ResponseEntity<?> getAll() {
+        return ResponseEntity.ok(
+                userPostgresService.getAll()
+        );
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<?> get(@PathVariable String id){
         return ResponseEntity.ok(

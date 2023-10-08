@@ -4,6 +4,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.List;
+
 @Service
 public class UserPostgresService {
     private final UserPostgresRepository userPostgresRepository;
@@ -37,5 +39,9 @@ public class UserPostgresService {
 
     public void deleteById(String id) {
         userPostgresRepository.deleteById(id);
+    }
+
+    public List<UserPostgres> getAll() {
+        return userPostgresRepository.findAll();
     }
 }
