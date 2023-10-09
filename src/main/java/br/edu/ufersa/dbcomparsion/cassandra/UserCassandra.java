@@ -8,7 +8,7 @@ import java.util.UUID;
 
 @Table
 public class UserCassandra {
-    @PrimaryKey private final String id;
+    @PrimaryKey private String id;
     private String name;
     private String username;
     private String email;
@@ -24,6 +24,10 @@ public class UserCassandra {
 
     public String getId() {
         return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {

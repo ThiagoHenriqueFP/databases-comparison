@@ -13,7 +13,13 @@ public class UserCassandraService {
     }
 
     public UserCassandra save(UserCassandra user) {
-        return userCassandraRepository.save(user);
+        UserCassandra u = new UserCassandra(
+                user.getName(),
+                user.getUsername(),
+                user.getEmail(),
+                user.getWebsite()
+        );
+        return userCassandraRepository.save(u);
     }
 
     public UserCassandra getById(String id){
